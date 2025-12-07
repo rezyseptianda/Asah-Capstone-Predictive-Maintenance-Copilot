@@ -46,61 +46,61 @@ npm install
 
 ---
 
-🤝 Panduan Kolaborasi Git (WAJIB DIBACA TIM) ⚠️
-Agar kode tidak bentrok dan tetap rapi, kita menggunakan alur kerja (workflow) berikut. Mohon dipatuhi oleh tim Back-End dan ML saat integrasi.
+## 🤝 Panduan Kolaborasi Git (WAJIB DIBACA TIM) ⚠️
 
-Struktur Branch
-🔴 main: Branch UTAMA. Kode di sini adalah versi final yang siap demo/production. JANGAN PUSH LANGSUNG KE SINI.
+Agar kode tidak bentrok dan tetap rapi, kita menggunakan alur kerja (_workflow_) berikut. Mohon dipatuhi oleh tim Back-End dan ML saat integrasi.
 
-🟡 develop: Branch PENGEMBANGAN. Semua fitur baru digabungkan di sini terlebih dahulu sebelum masuk ke main.
+### 🌿 Struktur Branch
 
-🔵 feature/\*: Branch FITUR. Gunakan ini saat kalian sedang mengerjakan tugas spesifik (misal: feature/api-login, feature/chart-sensor).
-
----
-
-SOP: Bagaimana Cara Mulai Coding?
-Pindah ke branch develop dan update kode terbaru: Selalu mulai dengan mengambil kode terbaru dari teman-teman agar tidak konflik.
-
-Bash
-
-git checkout develop
-git pull origin develop
-Buat Branch Baru untuk Tugas Kalian: Berikan nama branch yang jelas sesuai fitur yang dikerjakan.
-
-Bash
-
-# Contoh: Mengerjakan integrasi API Login
-
-git checkout -b feature/api-login
-Lakukan Coding & Commit: Simpan perubahan kalian secara berkala. Gunakan pesan commit yang jelas.
-
-Bash
-
-git add .
-git commit -m "feat: integrate login API with backend endpoint"
+- 🔴 **`main`**: Branch UTAMA. Kode di sini adalah versi final yang siap demo/production. **JANGAN PUSH LANGSUNG KE SINI.**
+- 🟡 **`develop`**: Branch PENGEMBANGAN. Semua fitur baru digabungkan di sini terlebih dahulu sebelum masuk ke `main`.
+- 🔵 **`feature/*`**: Branch FITUR. Gunakan ini saat kalian sedang mengerjakan tugas spesifik (misal: `feature/api-login`, `feature/chart-sensor`).
 
 ---
 
-SOP: Bagaimana Jika Kode Sudah Selesai?
-Push Branch Kalian ke GitHub:
+### 🏁 SOP: Bagaimana Cara Mulai Coding?
 
-Bash
+1.  **Pindah ke branch `develop` dan update kode terbaru:**
+    Selalu mulai dengan mengambil kode terbaru dari teman-teman agar tidak konflik.
 
-git push -u origin feature/nama-fitur-kalian
-Buat Pull Request (PR):
+    ```bash
+    git checkout develop
+    git pull origin develop
+    ```
 
-Buka halaman repository di GitHub.
+2.  **Buat Branch Baru untuk Tugas Kalian:**
+    Berikan nama branch yang jelas sesuai fitur yang dikerjakan.
 
-Kalian akan melihat tombol "Compare & pull request". Klik tombol itu.
+    ```bash
+    # Contoh: Mengerjakan integrasi API Login
+    git checkout -b feature/api-login
+    ```
 
-Pastikan arahnya: base: develop <--- compare: feature/nama-fitur-kalian.
+3.  **Lakukan Coding & Commit:**
+    Simpan perubahan kalian secara berkala. Gunakan pesan commit yang jelas.
+    ```bash
+    git add .
+    git commit -m "feat: integrate login API with backend endpoint"
+    ```
 
-Berikan judul dan deskripsi apa yang kalian ubah.
+---
 
-Klik Create Pull Request.
+### ✅ SOP: Bagaimana Jika Kode Sudah Selesai?
 
-Review & Merge:
+1.  **Push Branch Kalian ke GitHub:**
 
-Beritahu tim di grup (WhatsApp/Discord) untuk mengecek PR kalian.
+    ```bash
+    git push -u origin feature/nama-fitur-kalian
+    ```
 
-Jika sudah oke, Admin/Lead akan melakukan Merge ke develop.
+2.  **Buat Pull Request (PR):**
+
+    - Buka halaman repository di GitHub.
+    - Kalian akan melihat tombol **"Compare & pull request"**. Klik tombol itu.
+    - Pastikan arahnya: `base: develop` <--- `compare: feature/nama-fitur-kalian`.
+    - Berikan judul dan deskripsi apa yang kalian ubah.
+    - Klik **Create Pull Request**.
+
+3.  **Review & Merge:**
+    - Beritahu tim di grup (WhatsApp/Discord) untuk mengecek PR kalian.
+    - Jika sudah oke, Admin/Lead akan melakukan **Merge** ke `develop`.
